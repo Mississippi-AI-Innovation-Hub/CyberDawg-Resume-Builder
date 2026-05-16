@@ -6,7 +6,7 @@ import boto3
 # AWS clients
 s3      = boto3.client("s3", region_name="us-east-1")
 bedrock = boto3.client("bedrock-runtime", region_name="us-east-1")
-BUCKET   = "tpmb-resume-training-data"
+BUCKET   = os.environ.get("RESUME_S3_BUCKET")
 MODEL_ID = "us.amazon.nova-pro-v1:0"
 
 # paths
