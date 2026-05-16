@@ -124,4 +124,4 @@ No candidate resume data is stored permanently. Generated files exist only in te
 
 ## License
 
-This project was developed as a Proof of Concept for the Mississippi Department of Employment Security.
+MIT License
