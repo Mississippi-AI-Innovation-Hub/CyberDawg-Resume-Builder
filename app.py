@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 import streamlit as st
 import io
 import os
@@ -91,7 +94,7 @@ if not st.session_state.get('authenticated'):
         username = st.text_input('Username')
         password = st.text_input('Password', type='password')
         if st.form_submit_button('Log In'):
-            if username == 'admin' and password == 'mdes2026':
+            if username == os.environ.get('APP_USERNAME') and password == os.environ.get('APP_PASSWORD'):
                 st.session_state['authenticated'] = True
                 st.session_state['_username'] = username
                 st.session_state['_last_activity'] = time.time()
