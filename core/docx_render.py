@@ -1,6 +1,5 @@
 # docx_render.py — DOCX renderer for resume generation.
 
-
 import os
 from core.config import LOGO_PATH
 from core.ai import _calc_tenure
